@@ -1,0 +1,238 @@
+body{
+    -webkit-user-select:none;
+    user-select:none;
+    line-height:1.5;
+}
+label input[type=checkbox]{
+    margin-right:5px;
+    vertical-align:middle;
+}
+/* -- button -- */
+.btn{
+    display:inline-block;
+    padding:4px 10px;
+    border:1px solid #ccc;
+    border-bottom-color:#b3b3b3;
+    background-color:whiteSmoke;
+    background-image:-webkit-linear-gradient(top, white, #E6E6E6);
+    background-repeat:repeat-x;
+    color:#333;
+    vertical-align:middle;
+    text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
+    border-radius:4px;
+    box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    font-size:13px;
+    line-height:18px;
+}
+.btn-mini{
+    padding:3px 8px;
+    font-size:11px;
+    line-height:14px;
+}
+.btn:hover{
+    background-color:#E6E6E6;
+    background-position:0 -15px;
+    transition:background-position 0.1s linear;
+    color:#333;
+    text-decoration:none;
+}
+.file-wrapper{
+    padding:86px 10px 10px;
+    line-height:2;
+}
+/* -- header -- */
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:10px;
+    background:#f5f5f5;
+    z-index:20;
+}
+
+/* -- file list -- */
+.file-list li{
+    position:relative;
+    margin:10px 0;
+    padding:0 10px;
+    border-radius:3px;
+    background:#f1f1f1;
+}
+.file-list li:hover{
+    background:#e1e1e1;
+}
+.file-list .chk{
+    position:absolute;
+    right:8px;
+    top:8px;
+    vertical-align:middle;
+}
+.file-list a{
+    text-decoration:none;
+    color:#666;
+}
+.file-list a:hover{
+    text-decoration:underline;
+}
+.file-list .file{
+    display:inline-block;
+    padding-left:20px;
+    overflow:hidden;
+    background:url(../img/sprite-icon.png) no-repeat 0 -35px;
+    white-space:nowrap;
+}
+.file-item-directory .file{
+    background-position:0 5px;
+}
+/* -- file nav -- */
+.file-nav{
+    display:inline-block;
+    border:1px solid #ccc;
+    border-radius:5px;
+    line-height:28px;
+    overflow:hidden;
+}
+.file-nav a{
+    position:relative;
+    display:inline-block;
+    padding:0 5px 0 20px;
+    background:#f1f1f1;
+    color:#555;
+    text-decoration:none;
+}
+.file-nav a:first-child{
+    padding-left:8px;
+    border-radius:3px 0 0 3px;
+}
+.file-nav a::after, .file-nav a::before{
+    position:absolute;
+    top:0;
+    right:-14px;
+    width:0;
+    height:0;
+    border-top:14px solid transparent;
+    border-bottom:14px solid transparent;
+    border-left:14px solid #ccc;
+    content:'';
+    z-index:10;
+}
+.file-nav a::before{
+    margin-right:1px;
+    border-left-color:#f1f1f1;
+    z-index:12;
+}
+.file-nav a:hover{
+    background:#ddd;
+}
+.file-nav a:hover::before{
+    border-left-color:#ddd;
+}
+.file-nav a:last-child{
+    padding-right:8px;
+    border-radius:0 3px 3px 0;
+}
+.file-nav a:last-child::before, .file-nav a:last-child::after{
+    display:none;
+}
+/* -- file action -- */
+.file-action{
+    padding-top:10px;
+}
+.file-action .btn{
+    margin-right:10px;
+}
+/* -- overlay -- */
+.overlay-wrapper{
+    visibility:hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    text-align:center;
+}
+.overlay-mask{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:#000;
+    opacity:0;
+    z-index:100;
+
+    -webkit-transition:all 0.2s ease;
+    transition:all 0.2s ease;
+}
+.overlay-xbox{
+    position:relative;
+    top:-200px;
+    display:inline-block;
+    min-width:100px;
+    margin:0 auto;
+    border:3px solid #ccc;
+    border-top:none;
+    background:#fff;
+    z-index:110;
+    text-align:left;
+    -webkit-transition:all 0.3s ease;
+    transition:all 0.3s ease;
+}
+.overlay-show{
+    visibility:visible;
+}
+.overlay-show .overlay-mask{
+    opacity:.2;
+}
+/* -- progress -- */
+.progress-wrapper{
+    padding:10px;
+}
+.progress-bar{
+    width:280px;
+}
+/* -- xbox compress -- */
+.xbox-compress{
+    width:480px;
+    padding:10px;
+}
+.xbox-compress dt{
+    margin-bottom:5px;
+}
+.xbox-compress dd{
+    margin-bottom:12px;
+}
+.xbox-compress label{
+    margin-right:10px;
+}
+.xbox-compress input{
+    margin-right:5px;
+}
+.xbox-compress .warn{
+    color:#999;
+    line-height:1.5;
+}
+
+/* -- form style -- */
+.group-lb{
+    margin-right:12px;
+}
+.group-lb input[type=radio]{
+    margin-right:5px;
+}
+.group-lb input[type=text]{
+    width:100px;
+    margin-left:5px;
+    vertical-align:middle;
+}
+/* -- flex layout -- */
+.flex-wrapper{
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex-direction:row;
+    flex-direction:row;
+}
+.flex-item{
+    -webkit-flex:1;
+    flex:1;
+}
